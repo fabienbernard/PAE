@@ -1,2 +1,2 @@
 # PAE
-PDF Attachment Extractor
+PDF Attachment Extracter
