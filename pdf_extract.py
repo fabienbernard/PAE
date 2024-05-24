@@ -1,4 +1,5 @@
-import PyPDF2
+#import pypdf
+from pypdf import PdfReader
 import argparse
 import os
 
@@ -17,8 +18,8 @@ def get_attachments(reader):
             if isinstance(f, str):
                 name = f
                 data_index = file_names.index(f) + 1
-                f_dict = file_names[data_index].getObject()
-                f_data = f_dict['/EF']['/F'].getData()
+                f_dict = file_names[data_index].get_object()
+                f_data = f_dict['/EF']['/F'].get_data()
                 attachments[name] = f_data
         return attachments
     else:
@@ -49,7 +50,7 @@ def main():
 
     try:
         with open(args.pdf_file, 'rb') as handler:
-            reader = PyPDF2.PdfFileReader(handler)
+            reader = PdfReader(handler)
             if args.verbose:
                 print("Extracting attachments...")
             attachments = get_attachments(reader)
