@@ -19,13 +19,13 @@ The script includes basic error handling to manage issues like file not found or
 
 ## Requirements
 - Python 3
-- PyPDF2 library
+- pypdf library
 
 ## Installation
-Ensure that you have Python 3 installed on your system. You can install the PyPDF2 library using pip:
+Ensure that you have Python 3 installed on your system. You can install the pypdf library using pip:
 
 ```bash
-pip install PyPDF2
+pip install pypdf
 ```
 
 ## Usage
